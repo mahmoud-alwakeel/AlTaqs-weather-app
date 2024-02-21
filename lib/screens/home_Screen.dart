@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:new_weather_app/widgets/no_weather_widget.dart';
 import 'package:new_weather_app/widgets/weather_info_body.dart';
 
 class HomeScreen extends StatelessWidget {
