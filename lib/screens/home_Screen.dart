@@ -13,13 +13,13 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Al Taqs'),
+        title: const Text('Al Taqs'),
         actions: [
           IconButton(onPressed: (){
             Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-              return SearchScreen();
+              return const SearchScreen();
             }));
-          }, icon: Icon(Icons.search))
+          }, icon: const Icon(Icons.search))
         ],
       ),
       body: BlocBuilder<GetWeatherCubit, WeatherState>(
@@ -27,7 +27,9 @@ class HomeScreen extends StatelessWidget {
           if (state is WeatherInitialState) {
             return NoWeatherBody();
           } else if(state is WeatherLoadedState) {
-            return WeatherInfoBody(weatherModel: state.weatherModel,);
+            return WeatherInfoBody(
+              weather: state.weatherModel,
+            );
           } else {
             return Text('OPPS there was an error');
           }
