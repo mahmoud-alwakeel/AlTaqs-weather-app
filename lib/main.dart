@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:new_weather_app/cubit/get_weather_cubit/get_weather_cubit.dart';
 import 'package:new_weather_app/cubit/get_weather_cubit/get_weather_states.dart';
-import 'package:new_weather_app/screens/home_Screen.dart';
+import 'package:new_weather_app/screens/home_screen.dart';
 
 void main() {
   runApp(const MyWeatherApp());
@@ -40,11 +40,11 @@ MaterialColor getThemeColor(String? condition) {
     return Colors.purple;
   }
   switch (condition) {
-    case 'sunny':
+    case 'Sunny':
       return Colors.orange;
-    case 'cloudy':
+    case 'Cloudy':
       return Colors.grey;
     default:
-      return Colors.red;
+      return Colors.pink;
   }
 }
